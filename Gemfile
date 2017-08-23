@@ -24,6 +24,7 @@ gem 'puma', '~> 3.7'
 # view
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'jquery-rails'
+gem 'kaminari'
 gem 'popper_js', '~> 1.11.1'
 gem 'sass-rails', '~> 5.0'
 gem 'tether-rails'
