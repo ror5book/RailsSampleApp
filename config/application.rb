@@ -36,6 +36,8 @@ module RailsSampleApp
       g.helper false
     end
 
+    config.active_job.queue_adapter = :sidekiq
+
     # Don't generate system test files.
     config.generators.system_tests = nil
   end

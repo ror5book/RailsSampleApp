@@ -10,6 +10,8 @@ end
 # base
 gem 'devise'
 gem 'rails', '~> 5.1.3'
+gem 'sidekiq'
+gem 'sinatra'
 gem 'therubyracer', platforms: :ruby, github: 'cowboyd/therubyracer'
 
 # database
