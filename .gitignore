@@ -17,3 +17,6 @@
 /yarn-error.log
 
 .byebug_history
+
+.idea
+.DS_Store
