@@ -12,6 +12,15 @@
   </div>
 
   <div class="col-md-9 col-12">
+    <%= form_with model: Post.new do |f| %>
+      <div class="input-group pb-4 mx-0">
+        <%= f.text_field :body, class: "form-control", placeholder: "今なにしている？" %>
+
+        <span class="input-group-btn">
+          <%= f.submit "投稿", class: "btn btn-primary" %>
+        </span>
+      </div>
+    <% end %>
     <%= render partial: "post", collection: @posts %>
   </div>
 </div>
