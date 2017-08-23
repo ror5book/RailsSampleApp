@@ -69,6 +69,10 @@ class User < ApplicationRecord
     devise_mailer.send(notification, self, *args).deliver_later
   end
 
+  def created_month
+    created_at.strftime('%Y年%m月')
+  end
+
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
     conditions[:email]&.downcase!
