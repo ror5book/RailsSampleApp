@@ -5,7 +5,8 @@
       <div class="card-body">
         <h4 class="card-title"><%= "@#{@user.name}" %></h4>
         <p class="card-text">
-          <span class="text-secondary">ユーザー情報がここに入ります。</span>
+          <span class="text-secondary"><%= "#{@user.created_month}に登録" %></span><br/>
+          <span class="text-secondary"><%= @user.posts_count %> posts</span>
         </p>
       </div>
     </div>
