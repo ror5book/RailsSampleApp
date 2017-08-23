@@ -32,6 +32,8 @@
 #
 
 class User < ApplicationRecord
+  has_many :posts, inverse_of: :user
+
   validates :name,
             presence: true,
             uniqueness: { case_sensitive: false }
