@@ -9,6 +9,7 @@ end
 
 # base
 gem 'devise'
+gem 'paperclip', '~> 5.0.0'
 gem 'rails', '~> 5.1.3'
 gem 'sidekiq'
 gem 'sinatra'

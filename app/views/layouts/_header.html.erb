@@ -1,12 +1,16 @@
 <nav class="navbar bg-dark navbar-dark">
   <a class="navbar-brand" href="/"><%= ApplicationHelper::APP_NAME %></a>
   <% if user_signed_in? %>
-      <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <%= link_to "プロフィール編集", edit_user_registration_path, class: "nav-link text-secondary" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link text-secondary" %>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <%= link_to("#", id: "navbarDropdownMenuLink", class: "nav-link dropdown-toggle", "data-toggle": "dropdown", "data-flip": "true", "aria-haspopup": "false", "aria-expanded": "false") do %>
+              <%= image_tag current_user.avatar.url, class: "rounded-circle", style: "width: 50px;" %>
+          <% end %>
+
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" style="position: absolute;right: 0;left: auto;">
+            <%= link_to "プロフィール編集", edit_user_registration_path, class: "dropdown-item" %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
         </li>
       </ul>
   <% end %>
