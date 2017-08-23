@@ -9,6 +9,11 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, class: "form-control col-md-5 col-sm", placeholder: "Username" %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
