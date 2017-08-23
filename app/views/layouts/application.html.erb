@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsSampleApp</title>
+    <title><%= page_title %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -9,6 +9,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %>
+    <div class="container py-4 px-0">
+      <%= flash_message(flash[:success], :success) if flash[:success] %>
+      <%= flash_message(flash[:error], :danger) if flash[:error] %>
+      <%= flash_message(flash[:alert], :warning) if flash[:alert] %>
+      <%= flash_message(flash[:notice], :info) if flash[:notice] %>
+      <%= yield %>
+    </div>
   </body>
 </html>
