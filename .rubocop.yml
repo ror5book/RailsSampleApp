@@ -17,3 +17,7 @@ Metrics/BlockLength:
   Exclude:
     - spec/**/*
     - config/**/*
+
+# 日本語でのコメント
+Style/AsciiComments:
+  Enabled: false
