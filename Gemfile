@@ -8,6 +8,7 @@ git_source(:github) do |repo_name|
 end
 
 # base
+gem 'devise'
 gem 'rails', '~> 5.1.3'
 gem 'therubyracer', platforms: :ruby, github: 'cowboyd/therubyracer'
 
