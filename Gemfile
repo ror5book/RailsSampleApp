@@ -9,6 +9,7 @@ end
 
 # base
 gem 'activeadmin'
+gem 'aws-sdk', '~> 2.3'
 gem 'devise'
 gem 'paperclip', '~> 5.0.0'
 gem 'rails', '~> 5.1.3'
